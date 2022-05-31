@@ -46,6 +46,10 @@ button:hover{
     transition: 0.6s;
 }
 
+
+
+
+
 body{
     margin: 0;
     min-height: 100vh;
@@ -56,6 +60,9 @@ body{
     background-position: center;
     
 }
+
+
+
 
 header{
     position: fixed;
@@ -193,7 +200,7 @@ header label{
 }
 
 .somos-python .texto{
-    width: 50%;
+    width: 60%;
     max-width: 600px;
     font-size: 0.8em;
     text-align: initial;
@@ -213,24 +220,96 @@ header label{
 
 
 
+.nuestro-equipo{
+    padding: 50px 0px;
+    min-height: 100vh;
+}
+.section-title{
+    padding: 30px 0px;
+}
+.section-title h2{
+    color: #0e0e0e;
+    font-size: 6.5em;
+    font-weight: 700;
+}
+.section-title p{
+    color: blueviolet;
+    font-size: 2.5em;
+    font-weight: 700;
+    animation-delay: 1.5s;
+    
+  
+}
+.team-item{
+    position: relative;
+    background: #b4b4b6;
+    margin: 15px 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s;
+    
+    
 
-.lenguajes-title{
-    display: flex;
-    justify-content: center;
-    font-size: 7em;
+}
+
+.item-meta{
+    position: absolute;
+    background: #424247;
+    width: 100%;
+    bottom: -35px;
+    left: 0;
+    padding: 10px 15px;
+    transition: all .5s;
+}
+.team-item:hover .item-meta{
+    bottom: 0px;
+}
+
+
+.item-meta h3{
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 500;
     animation-delay: 1.5s;
     animation-name: animacion1;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+  
+
+
 @keyframes animacion1{
     0%{
-        color: rgb(255, 255, 255);
+        color: rgb(209, 0, 209);
         transition: 1s
     }
+}
+
+
+.item-meta h6{
+    color: #ffffff;
+    font-size: 2em;
+}
+.item-image img{
+    transition: all .5s;
+}
+.team-item:hover img{
+    background: #000000;
+}
+
+
+
+
+.lenguajes-title{
+    display: flex;
+    justify-content: center;
+    font-size: 7em;
+   
+}
+
     
-    }
+    
 
 
 
@@ -353,9 +432,48 @@ header label{
 
 }
 
+.overlay-image{
+    height: 65vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+.card{
+    padding: 55px;
+    background: linear-gradient(rgba(5,7,12, 0.75), rgba(5,7,12, 0.75));
+}
+
+
+.carousel-item{
+    height: 55vh;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-item h4{
+    font-size: 4.5em;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(209, 0, 209);
+   
+}
+
+
+.carousel-item p{
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;   
+}
+
+
 .libreria-title{
     color: #ffffff;
     font-size: 6.5em;
+    font-weight: bolder;
     text-align: center;
     animation-delay: 1.5s;
     animation-name: animacion2;
@@ -366,20 +484,19 @@ header label{
 
 @keyframes animacion2{
     0%{
-        color: rgb(255, 0, 43);
+        color:rgb(209, 0, 209);
         transition: 1s
     } 
 }
 
 
-
 .cardss {
     margin: 0 auto;
-    padding: 150px 100px;
+    padding: 150px 40px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: auto;
-    gap: 110px;
+    gap: 130px;
     font-family: sans-serif;
 }
 .cards{
@@ -440,6 +557,8 @@ header label{
 
 }
 
+
+
 .cursos-title{
     margin: 0;
     animation-delay: 1.5s;
@@ -498,7 +617,7 @@ header label{
 }
 
 .carta:hover{
-      transform: scale(1.08);
+      transform: scale(1.03);
 }
 
 .carta:first-child{
@@ -699,7 +818,6 @@ footer{
 
 
 
-
 @media(max-width:991px){
     header{
         padding: 20px;
@@ -871,3 +989,4 @@ footer{
 
     }
 }
+
