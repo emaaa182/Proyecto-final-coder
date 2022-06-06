@@ -1,54 +1,53 @@
 *{
-    text-transform: capitalize;
     text-decoration: none !important;
     scroll-behavior: smooth;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     
+    *::before,
+    *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
 }
 
-*,
-*::before,
-*::after{
-    margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+
+
+$color-python1:rgba(0,0,0,0.5);
 
 html{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10px;
+    font-size: 0.63em;
+    h1{ 
+        font-size: 5.5em;
+    }h2{
+         font-size: 6.5em;
+    }h3{ 
+        font-size: 2em;
+    }p{ 
+        font-size: 2.5em;
+    }li{
+         font-size: 1.25em;}
+
 
 }
-
-
-h1{ font-size: 5.5em;}
-h2{ font-size: 6.5em;}
-h3{ font-size: 2em;}
-p{ font-size: 2.5em;}
-ul{ list-style: none;}
-li{ font-size: 1.25em;}
-
 
 button{
     font-weight: bold;
     padding: 8px 25px;
     border-radius: 7px;
     border: 2px solid rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px $color-python1;
     color: white;
     background-color: rgb(138, 0, 143);
+    &:hover{
+        background-color: rgb(0, 0, 0);
+        transition: 0.6s;
+    }
 }
-
-button:hover{
-    background-color: rgb(0, 0, 0);
-    transition: 0.6s;
-}
-
-
-
-
 
 body{
     margin: 0;
@@ -61,97 +60,87 @@ body{
     
 }
 
-
-
-
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
     background: #000000f6;
-    box-shadow: 0px 5px 10px rgb(0, 0, 0, .1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     padding: 17px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-   
+    label{
+        font-size: 2.5em;
+        color: rgb(255, 255, 255);
+        display: none;
+        font-weight: bolder;
+        
     
-}
-header .logo{
-    font-weight: bolder;
-    font-size: 3.3em;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    margin-bottom: 35px;
+    }
+
+    .logo{
+        font-weight: bolder;
+        font-size: 3.3em;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        margin-bottom: 35px;
+         
+    }
+    .logo:hover{
+        color: #ff0022;
+        transition: 2s;
+        transform: rotate(400grad);
+        
+    }
+    .navbar ul {
+        list-style: none;
     
+    }
+    ul li{
+        position: relative;
+        float: left;
     
-   
-}
-header .logo:hover{
-    color: #ff0022;
-    transition: 2s;
-    transform: rotate(400grad);
+    }
+    ul li a{
+        padding: 20px;
+        font-size: 1.6em;
+        color: rgb(255, 255, 255);
+        display: block;
+        
+    }
+     ul li a:hover{
+        color: #ff0303;
+        border-radius: 5px;
+        box-shadow:  0 0 9px #ff0022,
+        0 0 5px #ff0303;
+        transition: 0.8s;
+        
+    }
+     ul li ul{
+        position: absolute;
+        width: 200px;
+        left: 0;
+        background: rgb(0, 0, 0);
+        display: none;
+        
+    }
+    ul li ul li{
+        width: 100%;
+        border-top: 5px solid rgba(0,0,0, .1);
+        border-right:  20px solid rgba(0,0,0, .1);
+        border-bottom: 3px solid rgba(0,0,0, .1);
+    }
+    ul li:hover>ul{
+        display: initial;
     
-}
-header .navbar ul {
-    list-style: none;
-
-}
-
-
-header .navbar ul li{
-    position: relative;
-    float: left;
-
-}
-header .navbar ul li a{
-    padding: 20px;
-    font-size: 1.6em;
-    color: rgb(255, 255, 255);
-    display: block;
-    
-}
-header .navbar ul li a:hover{
-    color: #ff0303;
-    border-radius: 5px;
-    box-shadow:  0 0 9px #ff0022,
-    0 0 5px #ff0303;
-    transition: 0.8s;
-    
-}
-header .navbar ul li ul{
-    position: absolute;
-    width: 200px;
-    left: 0;
-    background: rgb(0, 0, 0);
-    display: none;
-    
-}
-header .navbar ul li ul li{
-    width: 100%;
-    border-top: 5px solid rgba(0,0,0, .1);
-    border-right:  20px solid rgba(0,0,0, .1);
-    border-bottom: 3px solid rgba(0,0,0, .1);
+    }
+    #menu-bar{
+        display: none;
+    }
+       
 }
 
-
-header .navbar ul li:hover>ul{
-    display: initial;
-
-}
-
-#menu-bar{
-    display: none;
-}
-
-header label{
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    display: none;
-    font-weight: bolder;
-    
-
-}
 
 
 .hero{
@@ -163,121 +152,116 @@ header label{
     height: 90vh;
     background-image: linear-gradient(
         0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
+        $color-python1,
+        $color-python1
     )
-    ,url("imagenes/hero-imagen.jpeg");
+    ,url(/imagenes/hero-imagen.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-}
-
-.hero h1{
-    color: white;
-}
-
-.hero button{
-    font-size: 3em;
-}
-
-.color-h2-python{
-    color: blueviolet;
-}
-.somos-python h2{
-    font-size: 6.5em;
+    background-position: center center;   
+    h1{
+        color: white
+    }
+    button{
+        font-size: 2.8em;
+    }
+    
 }
 
 .somos-python .containerr{
     text-align: center;
     padding: 200px 12px;
-    
-}
-
-.somos-python .containerr{
     display: flex;
     justify-content: center;
 
+    .img-containerr{
+        
+        background-size: cover;
+        background-position: center center;
+         
+    }
+    h2{
+        font-size: 6.5em;
+    }
+    span{
+        color:blueviolet
+    }
+
+    .texto{
+        width: 60%;
+        max-width: 600px;
+        font-size: 0.8em;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+       
 }
-
-.somos-python .texto{
-    width: 60%;
-    max-width: 600px;
-    font-size: 0.8em;
-    text-align: initial;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.somos-python .img-containerr{
-    background-image: url("imagenes/python-academy.jpg");
-    background-size: cover;
-    background-position: center center;
-   
-   
-}
-
-
 
 .nuestro-equipo{
     padding: 50px 0px;
     min-height: 100vh;
-}
-.section-title{
-    padding: 30px 0px;
-}
-.section-title h2{
-    color: #0e0e0e;
-    font-size: 6.5em;
-    font-weight: 700;
-}
-.section-title p{
-    color: blueviolet;
-    font-size: 2.5em;
-    font-weight: 700;
-    animation-delay: 1.5s;
-    
-  
-}
-.team-item{
-    position: relative;
-    background: #b4b4b6;
-    margin: 15px 5px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all .5s;
-    
-    
+    .section-equipo-title{
+        padding: 30px 0px;
+    }
+    h2{
+        color: #0e0e0e;
+        font-size: 6.5em;
+        font-weight: 700;
+    }
+    p{
+        color: blueviolet;
+        font-size: 2.5em;
+        font-weight: 700;
+        animation-delay: 1.5s;
+    }
+    .col-md-3{
+        padding: 20px;  
+    }
+    .team-item{
+        position: relative;
+        background: #b4b4b6;
+        margin: 5px 5px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all .5s;  
+    }
+    .item-image img{
+        transition: all .5s;
+    }
+    .team-item:hover img{
+        background: #000000;
+    }
+    .item-meta{
+        position: absolute;
+        background: #424247;
+        width: 100%;
+        bottom: -35px;
+        left: 0;
+        padding: 10px 15px;
+        transition: all .5s;
+    }
+    .team-item:hover .item-meta{
+        bottom: 0px;
+    }
+    h3{
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 500;
+        animation-delay: 1.5s;
+        animation-name: animacion1;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    h6{
+        color: #ffffff;
+        font-size: 2em;
+    }  
 
 }
-
-.item-meta{
-    position: absolute;
-    background: #424247;
-    width: 100%;
-    bottom: -35px;
-    left: 0;
-    padding: 10px 15px;
-    transition: all .5s;
-}
-.team-item:hover .item-meta{
-    bottom: 0px;
-}
-
-
-.item-meta h3{
-    color: #fff;
-    font-size: 2.5em;
-    font-weight: 500;
-    animation-delay: 1.5s;
-    animation-name: animacion1;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-  
-
 
 @keyframes animacion1{
     0%{
@@ -285,20 +269,6 @@ header label{
         transition: 1s
     }
 }
-
-
-.item-meta h6{
-    color: #ffffff;
-    font-size: 2em;
-}
-.item-image img{
-    transition: all .5s;
-}
-.team-item:hover img{
-    background: #000000;
-}
-
-
 
 
 .lenguajes-title{
@@ -626,7 +596,7 @@ header label{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("imagenes/dev-front-end.jpg");
+    ,url(/imagenes/dev-back-end.jpg);
 
 }
 
@@ -636,7 +606,7 @@ header label{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("imagenes/dev-fullstacks.jpg");
+    ,url(/imagenes/dev-fullstacks.jpg);
 }
 
 .carta:nth-child(3){
@@ -645,7 +615,7 @@ header label{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("imagenes/dev-back-end.jpg");
+    ,url(/imagenes/dev-back-end.jpg);
 
 }
 
@@ -846,7 +816,7 @@ footer{
     width: 50px;
     border-radius: 50px;
     border: 1px solid #f2f2f2;
-    background-image: url(imagenes/facebook.png);
+    background-image: url(/imagenes/facebook.png);
     background-position: center;
     background-size: 65%;
     background-repeat: no-repeat;
@@ -860,13 +830,13 @@ footer{
 }
 
 .social-icono:nth-of-type(2){
-    background-image: url(imagenes/instagramv2.png);
+    background-image: url(/imagenes/instagramv2.png);
 }
 .social-icono:nth-of-type(3){
-    background-image: url(imagenes/twitter.png);
+    background-image: url(/imagenes/twitter.png);
 }
 .social-icono:nth-of-type(4){
-    background-image: url(imagenes/linkedin.png);
+    background-image: url(/imagenes/linkedin.png);
 }
 
 
@@ -989,7 +959,7 @@ footer{
     }
 }
 
-@media (min-width: 750px){
+@media (min-width: 850px){
     .hero h1{
         font-size: 5em;
     }
@@ -1046,7 +1016,7 @@ footer{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("imagenes/dev-front-end.jpg");
+        ,url("/imagenes/dev-front-end.jpg");
 
     }
 
@@ -1056,7 +1026,7 @@ footer{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("imagenes/dev-fullstacks.jpg");
+        ,url("/imagenes/dev-fullstacks.jpg");
     }
 
     .carta:nth-child(3){
@@ -1065,7 +1035,7 @@ footer{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("imagenes/dev-back-end.jpg");
+        ,url("/imagenes/dev-back-end.jpg");
 
     }
    
@@ -1077,3 +1047,8 @@ footer{
     }
 
 }
+
+
+
+
+
