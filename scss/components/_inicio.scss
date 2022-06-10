@@ -1,0 +1,28 @@
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/extends';
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: $gradiente1
+    ,url(/imagenes/hero-imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;   
+    h1{
+        color: nth($colores, 12)
+    };
+    button{
+        @extend %button;
+        font-size: 2.8em;
+        &:hover{
+            @include btn-hover(nth($colores, 2));
+        };
+    };
+    
+};

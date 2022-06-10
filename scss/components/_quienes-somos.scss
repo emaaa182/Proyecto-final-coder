@@ -1,0 +1,147 @@
+.quienes-somos .containerr{
+    text-align: center;
+    padding: 200px 12px;
+    display: flex;
+    justify-content: center;
+
+    .img-containerr{
+        
+        background-size: cover;
+        background-position: center center;       
+    };
+    h2{
+        font-size: 6.5em;
+    };
+    span{
+        color: nth($colores, 6)
+    };
+
+    .texto{
+        width: 60%;
+        max-width: 600px;
+        font-size: 0.8em;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    };
+       
+};
+
+.nuestro-equipo{
+    padding: 50px 0px;
+    min-height: 100vh;
+    .section-title{
+        padding: 30px 0px;
+    };
+    h2{
+        color: nth($colores, 7);
+        font-size: 6.5em;
+        font-weight: 700;
+    };
+    p{
+        color: nth($colores, 6);
+        font-size: 2.5em;
+        font-weight: 700;
+        animation-delay: 1.5s;
+    };
+    .col-md-3{
+        padding: 20px;  
+    };
+    .team-item{
+        position: relative;
+        background: nth($colores, 9);
+        margin: 5px 5px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all .5s;  
+    };
+    .item-image img{
+        transition: all .5s;
+    };
+    .team-item:hover img{
+        background: nth($colores, 11);
+    };
+    .item-meta{
+        position: absolute;
+        background: nth($colores, 10);
+        width: 100%;
+        bottom: -35px;
+        left: 0;
+        padding: 3px 5px;
+        transition: all .5s;
+    };
+    .team-item:hover .item-meta{
+        bottom: 0px;
+    };
+    h3{
+        color: nth($colores, 12);
+        font-size: 2.5em;
+        font-weight: 500;
+        animation-delay: 1.5s;
+        animation-name: animacion1;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    };
+    h6{
+        color: nth($colores, 12);
+        font-size: 2em;
+    };
+
+};
+
+@keyframes animacion1{
+    0%{
+        color: nth($colores, 14);
+        transition: 1s
+    };
+};
+
+@media(min-width:560px){
+    .item-meta{
+        width: 100vh;
+        bottom: -40px;
+    };
+    .team-item{
+     width: 110%;
+    height: 100%;
+   
+    };
+    .item-image{
+        width: 100%;
+        height: 100%;
+    };
+
+    .item-title{
+        width: 10vh;
+    };
+    
+    
+
+};
+
+@media (min-width: 850px){
+    .quienes-somos .containerr{
+        display: flex;
+        justify-content: space-evenly;
+        .texto{
+            width: 50%;
+            max-width: 600px;
+            text-align: initial;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        };
+        .img-containerr{
+            background-image: url("imagenes/python-academy.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 500px;
+            width: 400px; 
+        };
+    };
+
+};

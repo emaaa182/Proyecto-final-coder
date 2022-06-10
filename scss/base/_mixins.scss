@@ -1,0 +1,49 @@
+
+@mixin boton($color){
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 7px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: $color  
+}
+
+
+
+@mixin boton2($color1, $color2){
+    display: inline;
+    padding: 1.5rem 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+    border-radius: 8rem;
+    text-decoration: none;
+};
+
+@mixin fondo($url){
+    background: $url;
+    background-position: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+};
+
+@mixin fondo2($gradiente1, $url){
+    background-image: $gradiente1, $url;
+
+};
+
+@mixin btn-hover($color){
+    background-color: $color;
+    transition: 0.6s;
+};
+
+@mixin gradient($color1, $color2){
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+};
+
+@mixin scales($scale){
+    transform: $scale
+};

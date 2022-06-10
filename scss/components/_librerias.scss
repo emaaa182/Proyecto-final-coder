@@ -1,0 +1,139 @@
+.librerias{
+    background: url(/imagenes/libreria.jpg) fixed;
+    background-size: cover;
+    .librerias-title{
+        color: nth($colores, 12);
+        font-size: 6.5em;
+        font-weight: bolder;
+        text-align: center;
+        animation-delay: 1.5s;
+        animation-name: animacion2;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    };
+
+};
+
+
+@keyframes animacion2{
+    0%{
+        color:nth($colores, 14);
+        transition: 1s
+    } ;
+};
+
+.carousel{
+    padding: 55px;
+    background: $gradiente2;
+    .carousel-item{
+        height: 55vh;
+        min-height: 300px;
+        background-size: cover;
+        background-position: center;
+    };
+    .carousel-image{
+        height: 65vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+    };
+    h4{
+        font-size: 4.5em;
+        font-weight: bolder;
+        font-family: map-get($map: $fuentes, $key: 'segunda');
+        color: nth($colores, 14);
+       
+    };
+    p{
+        font-size: 4em;
+        color: nth($colores, 12);
+        font-weight: bolder;   
+    };
+    button{
+        &:hover{
+            @include btn-hover(lighten(nth($colores, 2), $amount: 10%));
+        
+        };
+    };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+.cardss {
+    margin: 0 auto;
+    padding: 150px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    gap: 130px;
+    font-family: map-get($map: $fuentes, $key: 'cuarta');
+    .cards{
+        transition: all 0.5s;
+    };
+    .cards:hover{
+        @include scales(scale(1.14));
+    };
+    .card__image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        border-top: 2px solid #333333;
+        border-right: 2px solid #333333;
+        border-left: 2px solid #333333;
+    };
+    .card__content {
+        line-height: 1.5;
+        font-size: 0.9em;
+        padding: 15px;
+        background: $gradiente2;
+        border-right: 2px solid #333333;
+        border-left: 2px solid #333333;
+    };
+    
+    .card__info {
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        background: $gradiente2;
+        font-size: 2.2em;
+        border-top: 2px solid #494849;
+    
+    };
+    p{
+        color:nth($colores, 8);
+    };
+    p:hover{
+        color: nth($colores, 15);
+        transition: 0.5s;
+    };
+    .btn-lib{
+        @include boton2(nth($colores,1), nth($colores, 3))
+    };
+    .btn-lib:hover{
+        @include gradient(nth($colores, 3), nth($colores, 1))
+    };
+    
+
+}
+
+@media screen and (max-width:745px ){
+    .contenedor-carousel{
+        display: none;
+    };
+};
+

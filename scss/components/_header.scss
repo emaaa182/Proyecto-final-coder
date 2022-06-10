@@ -1,0 +1,132 @@
+@import 'base/listas.scss';
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: nth($colores, 3);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+    label{
+        font-size: 2.5em;
+        color: nth($colores, 12);
+        display: none;
+        font-weight: bolder;
+        
+    
+    };
+   
+    .logo{
+        font-weight: bolder;
+        font-size: 3.3em;
+        cursor: pointer;
+        color: nth($colores, 12);
+        height: 2px;
+        margin-bottom: 5rem;
+         
+    };
+    .logo:hover{
+        color: nth($colores, 4);
+        transition: 2s;
+        transform: rotate(400grad);
+        
+    };
+    .navbar ul {
+        list-style: none;
+    
+    };
+    ul li{
+        position: relative;
+        float: left;
+    
+    };
+    ul li a{
+        padding: 20px;
+        font-size: 1.6em;
+        color: nth($colores, 12);
+        display: block;
+        
+    };
+     ul li a:hover{
+        color: nth($colores, 5);
+        border-radius: 5px;
+        box-shadow:  0 0 9px nth($colores, 4),
+        0 0 5px nth($colores, 5);
+        transition: 0.8s;
+        
+    };
+     ul li ul{
+        position: absolute;
+        width: 200px;
+        left: 0;
+        background: nth($colores, 2);
+        display: none;
+        
+    };
+    ul li ul li{
+        width: 100%;
+        border-top: 5px solid rgba(0,0,0, .1);
+        border-right:  20px solid rgba(0,0,0, .1);
+        border-bottom: 3px solid rgba(0,0,0, .1);
+    };
+    ul li:hover>ul{
+        display: initial;
+    
+    };
+    #menu-bar{
+        display: none;
+    };
+       
+};
+
+@media(max-width:991px){
+    header{
+        padding: 20px;
+        .navbar{
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: nth($colores, 2);
+            border-top: 1px solid rgb(104, 104, 104);
+            display: none;
+        
+        };
+         ul li {
+            width: 100%;
+            position: static;
+            border-top: 5px solid rgba(0,0,0, .1);
+            border-right:  20px solid rgba(0,0,0, .1);
+            border-bottom: 3px solid rgba(0,0,0, .1);
+        };
+        ul li ul li{
+            background: nth($colores, 2);
+            width: 100%;
+            left: 0;
+        };
+        ul li ul li a{
+            margin: 2px;
+            font-size: 1.6em;
+           
+        };
+        label{
+            display: initial;
+    
+        };
+        label:hover{
+            color: nth($colores, 4);
+            transition: 1s;
+        };
+        #menu-bar:checked ~ .navbar{
+            display: initial;
+            
+        };
+
+    };
+   
+    };
+    
+        
+   

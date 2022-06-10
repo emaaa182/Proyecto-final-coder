@@ -1,0 +1,121 @@
+
+.nuestros-cursos{
+    background-color: nth($colores, 31);
+    color: nth($colores, 12);
+    text-align: center;
+    .container-cursos{
+        padding: 180px 12px;
+    };
+    .cursos-title{
+        margin: 0;
+        animation-delay: 1.5s;
+        animation-name: animacion3;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    };
+    h3{
+        color: nth($colores, 14);
+    };
+    p{
+        margin-top: 45px;
+        display: none;
+    };
+    button{
+        font-size: 2.3em;
+    };
+
+};
+
+.carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+    transition: 0.5s;
+    button{
+        @include boton(darken(nth($colores, 14 ),$amount: 7))
+    };
+    button:hover{
+        @include btn-hover(darken(nth($colores, 1), $amount: 10))
+    };
+    &:hover{
+        @include scales(scale(1.03));
+    };
+    &:first-child{
+        @include fondo2($gradiente1, url(/imagenes/dev-front-end.jpg));
+    
+    };
+    &:nth-child(2){
+        @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.jpg));
+    };
+    &:nth-child(3){
+        @include fondo2($gradiente1, url(/imagenes/dev-back-end.jpg));
+    };
+
+};
+
+
+@media (min-width: 850px){
+
+    .nuestros-cursos .cursos{
+        display: flex;
+        justify-content: center;
+        p{
+            display: block;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        };
+        h2{
+            font-size: 6em;
+        };
+        h3{
+            font-size: 4em;
+            margin-top: 0;
+        };
+    };
+     .carta{
+        padding: 45px;
+        width: 600px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: nth($colores, 30);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        &:first-child{
+            @include fondo2($gradiente1, url(/imagenes/dev-front-end.jpg));
+    
+        };
+        &:nth-child(2){
+            @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.jpg));
+        };
+        &:nth-child(3){
+            @include fondo2($gradiente1, url(/imagenes/dev-back-end.jpg));
+    
+        };
+    };
+};
+
+
+@keyframes animacion3{
+    0%{
+        transform: translateY(40%);
+        color: nth($colores, 14);
+        transition: 1s
+    };
+    100%{
+        transform: translateY(-40%);
+    };
+
+};
+
+
+
+
+
+
+
+
+
+

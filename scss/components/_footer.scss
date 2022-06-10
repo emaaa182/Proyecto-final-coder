@@ -1,0 +1,60 @@
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color:nth($colores, 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .copyright{
+        font-size: 2em;
+        color: nth($colores, 21);
+        opacity: 0.3;
+        text-align: center;
+    };
+    .social-iconos-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    
+    };
+};
+
+.social-icono{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid nth($colores, 21);
+    background-image: url(/imagenes/facebook.png);
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    margin:1rem;
+    &:hover{
+        @include btn-hover(nth($colores, 32));
+       
+    };
+    &:nth-of-type(2){
+        background-image: url(/imagenes/instagramv2.png);
+    };
+    &:nth-of-type(3){
+        background-image: url(/imagenes/twitter.png);
+    };
+    &:nth-of-type(4){
+        background-image: url(/imagenes/linkedin.png);
+    };
+    
+   
+};
+
+.copyright{
+    font-size: 2em;
+    color: nth($colores, 21);
+    opacity: 0.3;
+    text-align: center;
+};
+
