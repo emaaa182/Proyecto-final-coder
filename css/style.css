@@ -311,8 +311,8 @@ header {
 
 .blog-post {
   width: 100%;
-  max-width: 98rem;
-  padding: 5rem;
+  max-width: 95rem;
+  padding: 4rem;
   background-color: #fff;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   display: flex;
@@ -321,17 +321,17 @@ header {
   .blog-post .blog-post-info2 span {
     display: block;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: .5rem 0; }
   .blog-post .blog-post_title {
-    font-size: 2.8rem;
-    margin: 1.5rem  0 2rem;
+    font-size: 2.2rem;
+    margin: 1rem  0 2rem;
     text-transform: uppercase;
     color: #4facfe; }
   .blog-post .blog-post_text {
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.7); }
   .blog-post .blog-post_cta {
     display: inline;
@@ -362,23 +362,27 @@ header {
 
 @media screen and (max-width: 1068px) {
   .blog-post {
-    max-width: 80rem; }
+    max-width: 80rem;
+    background: white; }
   .blog-post_img {
     min-width: 30rem;
     max-width: 30rem; } }
 
 @media screen and (max-width: 868px) {
   .blog-post {
-    max-width: 60rem; } }
+    max-width: 70rem; } }
 
 @media screen and (max-width: 768px) {
   .blog-post {
-    padding: 2rem;
-    flex-direction: column; }
+    padding: 2.5rem;
+    flex-direction: column;
+    height: 500px;
+    margin-bottom: 15px; }
   .blog-post_img {
-    min-width: 100%;
-    max-width: 100%;
-    transform: translate(0, -5rem); } }
+    max-width: 35%;
+    max-height: 35%;
+    background-size: cover;
+    transform: translate(0, -4rem); } }
 
 /*cierre seccion lenguajes*/
 /*inicio seccion librerias*/
