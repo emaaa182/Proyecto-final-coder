@@ -1,7 +1,7 @@
 {
   "name": "entrega-proyecto-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "pagina demo de una academia digital con motivo de proyecto final para coderhouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
