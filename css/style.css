@@ -32,6 +32,7 @@ html {
     background-size: cover;
     background-position: center; }
 
+/*inicio seccion header*/
 header {
   position: fixed;
   top: 0;
@@ -126,6 +127,7 @@ header {
     header #menu-bar:checked ~ .navbar {
       display: initial; } }
 
+/*cierre seccion header*/
 .inicio button {
   font-weight: bold;
   padding: 8px 25px;
@@ -135,6 +137,7 @@ header {
   color: white;
   background-color: #8a008f; }
 
+/*inicio seccion inicio*/
 .inicio {
   display: flex;
   align-items: center;
@@ -154,6 +157,8 @@ header {
       background-color: black;
       transition: 0.6s; }
 
+/*cierre seccion inicio*/
+/*inicio seccion quienes-somos*/
 .quienes-somos .containerr {
   text-align: center;
   padding: 200px 12px;
@@ -263,6 +268,8 @@ header {
       height: 500px;
       width: 400px; } }
 
+/*cierre seccion quienes-somos*/
+/*inicio seccion lenguajes*/
 .lenguajes-container h2 {
   display: flex;
   justify-content: center;
@@ -373,6 +380,8 @@ header {
     max-width: 100%;
     transform: translate(0, -5rem); } }
 
+/*cierre seccion lenguajes*/
+/*inicio seccion librerias*/
 .librerias {
   background: url(/imagenes/libreria.webp) fixed;
   background-size: cover; }
@@ -481,6 +490,8 @@ header {
   .contenedor-carousel {
     display: none; } }
 
+/*cierre seccion librerias*/
+/*inicio seccion cursos*/
 .nuestros-cursos {
   background-color: #1e1e1e;
   color: #fff;
@@ -565,6 +576,8 @@ header {
   100% {
     transform: translateY(-40%); } }
 
+/*cierre seccion cursos*/
+/*inicio seccion formulario*/
 .formulario-contenedor {
   background: url(/imagenes/fondo-formulario.webp);
   -webkit-background-size: cover;
@@ -692,6 +705,8 @@ header {
   100% {
     color: #ff851b; } }
 
+/*cierre seccion fomulario*/
+/*inicio footer*/
 footer {
   width: 100%;
   bottom: 0;
@@ -740,5 +755,4 @@ footer {
   opacity: 0.3;
   text-align: center; }
 
-.disclaimer {
-  display: none !important; }
+/*cierre footer*/
