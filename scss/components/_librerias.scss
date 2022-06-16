@@ -1,11 +1,14 @@
 .librerias{
-    background: url(/imagenes/libreria.jpg) fixed;
+    background: url(/imagenes/libreria.webp) fixed;
     background-size: cover;
     .librerias-title{
         color: nth($colores, 12);
-        font-size: 6.5em;
-        font-weight: bolder;
+        display: flex;
+        justify-content: center;
         text-align: center;
+        flex-direction: column;
+        font-size: 6em;
+        font-weight: bolder;
         animation-delay: 1.5s;
         animation-name: animacion2;
         animation-duration: 1.5s;

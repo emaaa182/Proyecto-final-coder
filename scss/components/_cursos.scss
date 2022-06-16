@@ -44,14 +44,14 @@
         @include scales(scale(1.03));
     };
     &:first-child{
-        @include fondo2($gradiente1, url(/imagenes/dev-front-end.jpg));
+        @include fondo2($gradiente1, url(/imagenes/dev-front-end.webp));
     
     };
     &:nth-child(2){
-        @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.jpg));
+        @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.webp));
     };
     &:nth-child(3){
-        @include fondo2($gradiente1, url(/imagenes/dev-back-end.jpg));
+        @include fondo2($gradiente1, url(/imagenes/dev-back-end.webp));
     };
 
 };
@@ -84,14 +84,14 @@
         background-color: nth($colores, 30);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         &:first-child{
-            @include fondo2($gradiente1, url(/imagenes/dev-front-end.jpg));
+            @include fondo2($gradiente1, url(/imagenes/dev-front-end.webp));
     
         };
         &:nth-child(2){
-            @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.jpg));
+            @include fondo2($gradiente1, url(/imagenes/dev-fullstacks.webp));
         };
         &:nth-child(3){
-            @include fondo2($gradiente1, url(/imagenes/dev-back-end.jpg));
+            @include fondo2($gradiente1, url(/imagenes/dev-back-end.webp));
     
         };
     };
